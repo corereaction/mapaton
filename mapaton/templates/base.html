@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+{%load static%}
+{%load polymerdep%}
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{%block titulo%}Mapatón{%endblock titulo%}</title>
+
+	<!--Estilos-->
+	<link rel="stylesheet" type="text/css" href="{%static 'css/main.css'%}">
+
+	<!--Polymer -->
+	<script src="{% static 'materialdjango/components/bower_components/webcomponentsjs/webcomponents-lite.js' %}"></script>
+
+	{{ "polymer/polymer.html" | dep}}
+
+	{{"paper-toolbar/paper-toolbar.html"|dep}}
+
+	{%block componentes%}
+
+	{%endblock componentes%}
+
+
+</head>
+<body>
+
+	<paper-toolbar>
+		<span class="title">¡Equipo Ganador!</span>
+	</paper-toolbar>
+
+	{%block content%}
+
+	{%endblock content%}
+
+
+	{%block javas%}
+	{%endblock javas%}
+
+</body>
+</html>
