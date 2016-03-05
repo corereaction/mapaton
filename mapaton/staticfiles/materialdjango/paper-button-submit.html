@@ -1,0 +1,38 @@
+<dom-module id="paper-button-submit">
+  <template>
+    <style>
+      :host {
+        border: 0;
+        padding: 0;
+        font-size: 16px;
+        margin: 0px;
+        font-family: "Roboto",sans-serif;
+        border-radius: 3px;
+        background: var(--default-primary-color);
+        color: var(--text-primary-color);;
+        font-weight: bolder;
+        text-transform: uppercase;
+        display: inline-block;
+        position: relative;
+        box-sizing: border-box;
+        margin: 0px;
+      }
+      paper-button{
+        margin-bottom: -4px;
+        margin-top: -4px;
+        margin-left:-10px;
+        margin-right: -10px;
+      }
+    </style>
+    <paper-button class="submitButton">
+      <content></content>
+    </paper-button>
+  </template>
+</dom-module>
+<script>
+  // element registration
+  Polymer({
+    is: "paper-button-submit",
+    extends: 'button',
+  });
+</script>
