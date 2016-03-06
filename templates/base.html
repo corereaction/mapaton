@@ -15,9 +15,13 @@
 	<!--Polymer -->
 	<script src="{% static 'materialdjango/components/bower_components/webcomponentsjs/webcomponents-lite.js' %}"></script>
 
+
 	{{ "polymer/polymer.html" | dep}}
 
-	{{"paper-toolbar/paper-toolbar.html"|dep}}
+	{{"paper-toolbar/paper-toolbar.html" | dep}}
+	{{"iron-flex-layout/iron-flex-layout-classes.html" | dep}}
+
+
 
 	{%block componentes%}
 
@@ -28,8 +32,10 @@
 <body>
 
 	<paper-toolbar>
-		<span class="title">¡Equipo Ganador!</span>
+		<img src="{%static 'images/logo_blanco.png'%}">
 	</paper-toolbar>
+
+
 
 	{%block content%}
 

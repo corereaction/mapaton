@@ -7,42 +7,16 @@ body {
 	margin:0;
 	padding:0
 }
-
 #mast_head{
-color:#5463B1;
-background-size: cover;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-#mast_fijos{
-	color: white;
-	position: absolute;
-	top:25%;
-	margin: 0 5%;
-}
-#logo_header{
-	height: 125px;
-}
-
+color:red;
+	}
 #info_mast_head{
-	background: #5463B1;
-	padding: 0em 0em 3em 0em;
+	background: yellow;
 }
-
 #info_mast_head ul{
-	margin: 0px;
-}
-
-.icon_info{
-	width: 80px;
-	height: 80px;
-	display: block;
-	margin: auto;
+	padding: 0px;
 }
 .item_info{
-
-	color:white;
 	display: inline-block;
 	padding: 3em;
 	list-style: none;
