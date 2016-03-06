@@ -44,9 +44,9 @@
 <script>
 	function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
+    zoom: 16,
     {%for punto in puntos%}
-    center: {lat: {{punto.latitude}}, lng: {{punto.longitude}}},
+    center: {lat: 19.393482, lng: -99.131939},
     {%endfor%}
     mapTypeId: google.maps.MapTypeId.TERRAIN
   });
@@ -62,17 +62,32 @@ var flightPlanCoordinates = [
     geodesic: true,
     strokeColor: '#FF0000',
     strokeOpacity: 1.0,
-    strokeWeight: 4
+    strokeWeight: 6
   });
 
   flightPath.setMap(map);
 
 
-  {%for punto in puntos%}
-  myLatLon={lat:{{punto.latitude}},lng:{{punto.longitude}}}
-  marker=makeMarker(myLatLon);
+  // {%for punto in puntos%}
+  // myLatLon={lat:19.393482,lng:-99.135726}
+  marker=makeMarker({lat:19.393482,lng:-99.135726});
   marker.setMap(map);
-  {%endfor%}
+
+  marker=makeMarker({lat:19.395304,lng:-99.134181});
+  marker.setMap(map);
+
+  marker=makeMarker({lat:19.391205,lng:-99.132582});
+  marker.setMap(map);
+
+  marker=makeMarker({lat:19.393431,lng:-99.130544});
+  marker.setMap(map);
+
+  marker=makeMarker({lat:19.391103,lng:-99.129836});
+  marker.setMap(map);
+
+  marker=makeMarker({lat:19.393269,lng:-99.128409});
+  marker.setMap(map);
+  // {%endfor%}
 }
 
 function makeMarker(myLatLon){
@@ -80,6 +95,40 @@ function makeMarker(myLatLon){
     position: myLatLon,
     title:"Hello World!"
 });
+
+
+
+
+var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+      'sandstone rock formation in the southern part of the '+
+      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+      'south west of the nearest large town, Alice Springs; 450&#160;km '+
+      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+      'Aboriginal people of the area. It has many springs, waterholes, '+
+      'rock caves and ancient paintings. Uluru is listed as a World '+
+      'Heritage Site.</p>'+
+      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+      '(last visited June 22, 2009).</p>'+
+      '</div>'+
+      '</div>';
+
+
+var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+
 	return marker;
 }
 
