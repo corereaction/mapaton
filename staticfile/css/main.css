@@ -1,0 +1,104 @@
+/*---tipografia*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext);
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	margin:0;
+	padding:0
+}
+p{
+	color: #363f40;
+	margin: 0;
+}
+
+#mast_head{
+color:#5463B1;
+background-size: cover;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+#mast_fijos{
+	color: white;
+	position: absolute;
+	top:25%;
+	margin: 0 5%;
+}
+#logo_header{
+	height: 125px;
+}
+
+#info_mast_head{
+	text-align: center;
+	height: 70%;
+	padding: 0em 0em 3em 0em;
+}
+
+#info_mast_head ul{
+	display: inline-block;
+	padding: 0px;
+
+}
+
+.icon_info{
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: auto;
+}
+.item_info{
+	font-family: 'Montserrat';
+	font-size: 20px;
+	color: #363f40;
+	display: inline-block;
+	margin: 1em 2em 0 2em ;
+	list-style: none;
+	text-align: center;
+}
+#sign_facebook{
+	color: white;
+	font-family: 'Montserrat';
+	font-size: 13px;
+	border: none;
+	border-radius: 5px;
+	background-color: #5463B1;
+	padding: 1em 5em;
+}
+
+
+
+/*Card style*/
+.contenedor_cards{
+
+	text-align: center;
+	margin: auto;
+	display:inline-block;
+	margin: 2em;
+
+
+}
+.rutas_favoritas_home{
+	margin: 2em;
+	text-align: center;
+	display: inline-block;
+}
+
+.card_principales{
+	width: 18em;
+	display: inline-block;
+}
+.ruta-header{
+	font-family: 'Montserrat';
+	text-align: left;
+	font-size: 20px;
+}
+.ruta-description {
+	font-size: 15px;
+	text-align: left;
+}
+
+
+  
+
+h1, h1 *, h2, h2 *, h3, h3 *, h4, h4 *, h5, h5*, h6, h6 * {font-family:'Montserrat', sans-serif;font-weight:bold;}
