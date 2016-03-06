@@ -4,6 +4,7 @@
 
 {%block componentes%}
 
+
 {{"google-map/google-map.html"|dep}}
 
 <style>
@@ -22,8 +23,10 @@
 
 {%block content%}
 
-	<h1>Comparando!</h1>
-
+<div id="header_ruta">
+  <h2>¡Conoce todas las rutas!</h2>
+  <p> La red de transportes era complicada. ERA:</p>
+</div>
 	<form action="." method="post">
 		{% csrf_token %}
 		<select name="trail">
