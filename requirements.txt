@@ -1,4 +1,5 @@
 Django==1.9.4
+gunicorn==19.4.5
 MaterialDjango==0.2.2.1
 requests==2.9.1
 whitenoise==2.0.6
