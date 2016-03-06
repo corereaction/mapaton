@@ -4,6 +4,7 @@
 
 body {
 	text-align: center;
+	color:#363f40;
 	font-family: 'Source Sans Pro', sans-serif;
 	margin:0;
 	padding:0
@@ -36,6 +37,7 @@ text-align: center;
 	color: white;
 	position: absolute;
 	top:25%;
+	right: 5%;
 	margin: 0 5%;
 }
 #logo_header{
@@ -52,6 +54,12 @@ text-align: center;
 	display: inline-block;
 	padding: 0px;
 
+}
+#header_banner{
+	margin: 0 1em 1em 1em;
+	text-align: center;
+	font-size:20px;
+	color:white;	
 }
 
 .icon_info{
@@ -71,12 +79,13 @@ text-align: center;
 }
 #sign_facebook{
 	color: white;
-	font-family: 'Montserrat';
-	font-size: 13px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
 	border: none;
 	border-radius: 5px;
 	background-color: #5463B1;
 	padding: 1em 5em;
+
 }
 
 
@@ -133,7 +142,8 @@ text-align: center;
 /*Ruta Gastro*/
 
 #header_ruta{
-margin: 0;
+	padding: 1em;
+	margin: 0;
 }
 
 .place-description{
@@ -150,5 +160,49 @@ margin: 0;
 }
 
 .review_card{
-	border-top: 1px gray;
+	text-align: left;
+	margin-bottom: 1em;
+	margin-left: 1em;
 }
+
+/*Mapa*/
+
+paper-toolbar + h1 {text-align:center;}
+
+select {background: #7A87CC;
+    font-size: larger;
+    color: white;
+    border: none;
+    padding: 1em;
+    margin: 0 auto!important;
+    position: relative;
+    left: auto;
+    right: auto;
+    display: block;}
+
+input[type="submit"] {
+    display: block;
+    position: relative;
+    margin: 1em auto;
+    font-size: 1.4em;
+    padding: 1em;
+    -webkit-appearance: none!important;
+    background: #4FC564;
+    color: white;
+    border: none;
+}
+
+form + div#map {
+	width: 50%;
+    float: left;
+    height: 520px;
+}
+
+div#map + img {
+    max-width: 200px;
+    max-height: 240px;
+    border: 1px solid #CACACA;
+    border-radius: 3px;-webkit-border-radius:3px;-moz-border-radius:3px;
+    margin: auto;
+    display: block;
+    box-shadow: 0px 2px 3px gray;-webkit-box-shadow: 0px 2px 3px gray;-moz-box-shadow: 0px 2px 3px gray;}

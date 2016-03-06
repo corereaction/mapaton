@@ -20,16 +20,16 @@
 
 {%block content%}
 <div id="header_ruta">
-  <img src="{%static 'images/Caele-heading-gastro.png'%}">
   <h2>¡Caéle! a la ruta del taco</h2>
   <p> Más que una ruta, un reto. ¿Lograrás probar todas las recomendaciones culinarias en cada lugar visitado?</p>
 </div>
-<div id="map"></div>
+<div id="map" style="width:80% !important; margin:auto"></div>
 
   <div class="contenedor_cards">
     <h2>Disfruta de las mejores taquerías:</h2>
     <div class="rutas_favoritas_gastro">
-        <paper-card class="card_ruta" image="{%static 'images/ruta1.jpg'%}">
+        <paper-card class="card_ruta" fadeImage="True"
+ image="{%static 'images/ruta1.jpg'%}">
         <div class="card-content">
           <div class="ruta-header">Tacos Frontera
             
@@ -48,45 +48,65 @@
       </paper-card> 
     </div>
 
-    <a href="{%url 'gastro'%}">
     <div class="rutas_favoritas_gastro">
-        <paper-card class="card_ruta" image="{%static 'images/ruta2.jpg'%}">
+        <paper-card class="card_ruta" image="{%static 'images/ruta1.jpg'%}">
           <div class="card-content">
-            <div class="ruta-header">Tacos Frontera
-            
+            <div class="ruta-header">Tacos 2
+              
+            </div>
+            <p class="place-description">Alvaro Obregón, Cuauhtemoc </p>
+            <p class="place-description">$・Taquería, Bar</p>
           </div>
-          <p class="place-description">Alvaro Obregón, Cuauhtemoc </p>
-          <p class="place-description">$・Taquería, Bar</p>
-      </paper-card>
-    </div>
-    </a>
+          <div class="review_card">
+            <iron-icon class="star review_place" icon="star"></iron-icon>
+            <iron-icon class="star review_place" icon="star"></iron-icon>
+            <iron-icon class="star review_place" icon="star"></iron-icon>
+            <iron-icon class="star review_place" icon="star"></iron-icon>
+            <iron-icon class="star review_place_not" icon="star"></iron-icon>
 
-    <a href="{%url 'compara'%}">
+          </div>
+        </paper-card> 
+    </div>
+
     <div class="rutas_favoritas_gastro">
-        <paper-card class="card_ruta" image="{%static 'images/icon3.jpg'%}">
-        <div class="card-content">
-          <div class="ruta-header">Revisa todas las rutas
-            
+        <paper-card class="card_ruta" image="{%static 'images/ruta1.jpg'%}">
+          <div class="card-content">
+            <div class="ruta-header">El Villamelón
+              
+            </div>
+            <p class="place-description">Bombilla, Insurgentes Sur </p>
+            <p class="place-description">$・Taquería Familia</p>
           </div>
-          <p class="place-description">Encuentra tu ruta.</p>
-        </div>
-      </paper-card>
+          <div class="review_card">
+            <iron-icon class="star review_place" icon="star"></iron-icon>
+            <iron-icon class="star review_place" icon="star"></iron-icon>
+            <iron-icon class="star review_place" icon="star"></iron-icon>
+            <iron-icon class="star review_place_not" icon="star"></iron-icon>
+            <iron-icon class="star review_place_not" icon="star"></iron-icon>
+
+          </div>
+        </paper-card> 
     </div>
-    </a>
 
-
-    <a href="{%url 'custom'%}">
     <div class="rutas_favoritas_gastro">
-        <paper-card class="card_ruta" image="{%static 'images/ruta4.png'%}">
-        <div class="card-content">
-          <div class="ruta-header">¡Crea tu Propia Ruta!
-            
+        <paper-card class="card_ruta" image="{%static 'images/ruta1.jpg'%}">
+          <div class="card-content">
+            <div class="ruta-header">Tacos 4
+              
+            </div>
+            <p class="place-description">Alvaro Obregón, Cuauhtemoc </p>
+            <p class="place-description">$・Taquería, Bar</p>
           </div>
-          <p class="place-description">¡Cáele y arma tu ruta!</p>
-        </div>
-      </paper-card>
-    </div>
-    </a>
+          <div class="review_card">
+            <iron-icon class="star review_place" icon="star"></iron-icon>
+            <iron-icon class="star review_place" icon="star"></iron-icon>
+            <iron-icon class="star review_place" icon="star"></iron-icon>
+            <iron-icon class="star review_place" icon="star"></iron-icon>
+            <iron-icon class="star review_place_not" icon="star"></iron-icon>
+
+          </div>
+        </paper-card> 
+    </div> 
 
 
   </div>
