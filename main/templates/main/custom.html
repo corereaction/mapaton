@@ -4,6 +4,7 @@
 
 {%block componentes%}
 
+
 <style>
   google-map{
     height: 400px;
@@ -20,11 +21,67 @@
 
 {%block content%}
 
-<div id="map"></div>
+<div id="header_custom">
+  <h2>Crea tu propia ruta y comparte las posibilidades.</h2>
+</div>
+
+<div id="map" style="width:80% !important; margin:auto"></div>
+
+<div class="contenedor_cards">
+  <h2>Estos son mis lugares favoritos para dominguear:</h2>
+  <div class="rutas_favoritas_gastro">
+      <paper-card class="card_ruta" fadeImage="True"
+image="{%static 'images/kiosco1.jpg'%}">
+      <div class="card-content">
+        <div class="ruta-header">El famoso Kiosko Morisco
+          
+        </div>
+        <p class="place-description">Santa María La Ribera</p>
+        <p class="place-description">$・Taquería, Bar</p>
+      </div>
+      <div class="review_card">
+        <iron-icon class="star review_place" icon="star"></iron-icon>
+        <iron-icon class="star review_place" icon="star"></iron-icon>
+        <iron-icon class="star review_place" icon="star"></iron-icon>
+        <iron-icon class="star review_place" icon="star"></iron-icon>
+        <iron-icon class="star review_place_not" icon="star"></iron-icon>
+
+      </div>
+    </paper-card> 
+  </div>
+
+  <div id="pulque" class="rutas_favoritas_gastro">
+      <paper-card class="card_ruta" image="{%static 'images/pulques1.jpg'%}">
+        <div class="card-content">
+          <div class="ruta-header">La Hija de los Apaches
+            
+          </div>
+          <p class="place-description">Doctores, Cuauhtemoc </p>
+          <p class="place-description">$・Pulcata, Bar</p>
+        </div>
+        <div class="review_card">
+          <iron-icon class="star review_place" icon="star"></iron-icon>
+          <iron-icon class="star review_place" icon="star"></iron-icon>
+          <iron-icon class="star review_place" icon="star"></iron-icon>
+          <iron-icon class="star review_place" icon="star"></iron-icon>
+          <iron-icon class="star review_place_not" icon="star"></iron-icon>
+
+        </div>
+      </paper-card> 
+  </div>
+
+
+  </div>
+
+
+</div>
+
 
 {%endblock content%}
 
 {%block javas%}
+
+
 
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQriPLIj2wAsBWJHXnWdDPIo_Q9Q2fo7A">
