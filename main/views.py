@@ -1,8 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404,HttpResponse
 from django.views.generic import View,TemplateView
 import requests
 from .models import Punto, Ruta
-from django.http import HttpResponseRedirect
+from django.core import serializers
 
 
 
@@ -176,6 +176,14 @@ class Gastro(View):
 		}
 
 		return render(request,template_name,context)
+
+
+class Api(View):
+	def get(self,request):
+		rutas=Ruta.objects.all()
+		data=serializers.serialize("json",rutas)
+		return HttpResponse( data, content_type="application/json" )
+
 
 
 

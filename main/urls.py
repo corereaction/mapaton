@@ -10,6 +10,7 @@ urlpatterns=[
 	url(r'^compara/$',views.Compara.as_view(),name='compara'),
 	url(r'^custom/$',views.Custom.as_view(),name='custom'),
 	url(r'^gastro/$',views.Gastro.as_view(),name='gastro'),
+	url(r'^api/$',views.Api.as_view(),name="api"),
 
 	
 ]
