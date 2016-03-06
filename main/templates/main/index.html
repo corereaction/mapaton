@@ -4,6 +4,8 @@
 
 {%block componentes%}
 
+
+
 {%endblock componentes%}
 
 
@@ -15,16 +17,62 @@
 		<div id="mast_fijos">
 			<img id="logo_header" src="{%static 'images/caele_logo_250px.png'%}"> 
 			<h3 > Descubre el turismo urbano de CDMX, la mejor forma de conocer los mejores lugares es subiendose al micro. ¡Súbale que hay lugares!</h3>
+			<button id="sign_facebook"> Registrate</button>
 		</div>
 	</div>
 
 	<div id="info_mast_head">
 		<ul>
-			<li class="item_info"><img class="icon_info" src="{%static 'images/image1.jpg'%}"> Descubre tus gustos </li>
-			<li class="item_info"><img class="icon_info" src="{%static 'images/image1.jpg'%}">Encuentra una ruta</li>
-			<li class="item_info"><img class="icon_info" src="{%static 'images/image1.jpg'%}">¡Caéle a CDMX!</li>
+			<ul>
+				<li class="item_info"><img class="icon_info" src="{%static 'images/icon1.png'%}"> Selecciona</li>
+				<p>La categoría de tu ruta</p>
+			</ul>
+			<ul>
+				<li class="item_info"><img class="icon_info" src="{%static 'images/icon2.png'%}"> Encuentra</li>
+				<p>O crea una ruta desde cero</p>
+			</ul>			
+			<ul>
+				<li class="item_info"><img class="icon_info" src="{%static 'images/icon3.png'%}"> ¡Caéle!</li>
+				<p>Vive tu experiencia urbana.</p>
+			</ul>
+			
 		</ul>
 	</div>
+	<div class="contenedor_cards">
+		<div class="rutas_favoritas_home">
+			  <paper-card class="card_principales" image="{%static 'images/ruta1.jpg'%}">
+		    <div class="card-content">
+		      <div class="ruta-header">Graffiti
+		        
+		      </div>
+		      <p class="ruta-description">Descubre la ruta del street art en CDMX</p>
+		    </div>
+		  </paper-card>	
+		</div>
+
+		<div class="rutas_favoritas_home">
+			  <paper-card class="card_principales" image="{%static 'images/ruta2.jpg'%}">
+			    <div class="card-content">
+			      <div class="ruta-header">Gastronómicas
+			        
+			      </div>
+			      <p class="ruta-description">Te retamos a comer un taco por lugar.</p>
+			    </div>
+			</paper-card>
+		</div>
+
+		<div class="rutas_favoritas_home">
+			  <paper-card class="card_principales" image="{%static 'images/ruta3.jpg'%}">
+		    <div class="card-content">
+		      <div class="ruta-header">Arqueológico
+		        
+		      </div>
+		      <p class="ruta-description">Llega a Teotihuacan con $20 pesos</p>
+		    </div>
+			</paper-card>
+		</div>
+	</div>
+
 
 {%endblock content%}
 
