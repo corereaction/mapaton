@@ -19,19 +19,77 @@
 
 
 {%block content%}
-
-<h1>Ruta Gastronómica</h1>
-
+<div id="header_ruta">
+  <img src="{%static 'images/Caele-heading-gastro.png'%}">
+  <h2>¡Caéle! a la ruta del taco</h2>
+  <p> Más que una ruta, un reto. ¿Lograrás probar todas las recomendaciones culinarias en cada lugar visitado?</p>
+</div>
 <div id="map"></div>
 
-<h2>Datos:</h2>
+  <div class="contenedor_cards">
+    <h2>Disfruta de las mejores taquerías:</h2>
+    <div class="rutas_favoritas_gastro">
+        <paper-card class="card_ruta" image="{%static 'images/ruta1.jpg'%}">
+        <div class="card-content">
+          <div class="ruta-header">Tacos Frontera
+            
+          </div>
+          <p class="place-description">Alvaro Obregón, Cuauhtemoc </p>
+          <p class="place-description">$・Taquería, Bar</p>
+        </div>
+        <div class="review_card">
+          <iron-icon class="star review_place" icon="star"></iron-icon>
+          <iron-icon class="star review_place" icon="star"></iron-icon>
+          <iron-icon class="star review_place" icon="star"></iron-icon>
+          <iron-icon class="star review_place" icon="star"></iron-icon>
+          <iron-icon class="star review_place_not" icon="star"></iron-icon>
 
-<ul>
-	<li>Negocio1</li>
-	<li>Negocio2</li>
-	<li>Negocio3</li>
-	<li>NegocioN</li>
-</ul>
+        </div>
+      </paper-card> 
+    </div>
+
+    <a href="{%url 'gastro'%}">
+    <div class="rutas_favoritas_gastro">
+        <paper-card class="card_ruta" image="{%static 'images/ruta2.jpg'%}">
+          <div class="card-content">
+            <div class="ruta-header">Tacos Frontera
+            
+          </div>
+          <p class="place-description">Alvaro Obregón, Cuauhtemoc </p>
+          <p class="place-description">$・Taquería, Bar</p>
+      </paper-card>
+    </div>
+    </a>
+
+    <a href="{%url 'compara'%}">
+    <div class="rutas_favoritas_gastro">
+        <paper-card class="card_ruta" image="{%static 'images/icon3.jpg'%}">
+        <div class="card-content">
+          <div class="ruta-header">Revisa todas las rutas
+            
+          </div>
+          <p class="place-description">Encuentra tu ruta.</p>
+        </div>
+      </paper-card>
+    </div>
+    </a>
+
+
+    <a href="{%url 'custom'%}">
+    <div class="rutas_favoritas_gastro">
+        <paper-card class="card_ruta" image="{%static 'images/ruta4.png'%}">
+        <div class="card-content">
+          <div class="ruta-header">¡Crea tu Propia Ruta!
+            
+          </div>
+          <p class="place-description">¡Cáele y arma tu ruta!</p>
+        </div>
+      </paper-card>
+    </div>
+    </a>
+
+
+  </div>
 
 
 {%endblock content%}

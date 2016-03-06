@@ -3,14 +3,27 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext);
 
 body {
+	text-align: center;
 	font-family: 'Source Sans Pro', sans-serif;
 	margin:0;
 	padding:0
 }
+h2{
+	font-family: 'Montserrat';
+	color: #363f40;
+}
+h3{
+	font-family: 'Montserrat';
+	color: #363f40;
+}
+
 p{
+	font: 'Montserrat';
 	color: #363f40;
 	margin: 0;
 }
+
+
 
 #mast_head{
 color:#5463B1;
@@ -75,8 +88,14 @@ text-align: center;
 	margin: auto;
 	display:inline-block;
 	margin: 2em;
+}
 
+.contenedor_cards a{
+	color: #363f40;
+}
 
+.contenedor_cards a:hover{
+	color: ‪#‎59913C‬;
 }
 .rutas_favoritas_home{
 	margin: 2em;
@@ -98,7 +117,38 @@ text-align: center;
 	text-align: left;
 }
 
+.rutas_favoritas_gastro{
+	margin: 1em;
+	text-align: center;
+	display: inline-block;
+}
 
-  
+.card_ruta{
 
-h1, h1 *, h2, h2 *, h3, h3 *, h4, h4 *, h5, h5*, h6, h6 * {font-family:'Montserrat', sans-serif;font-weight:bold;}
+	width: 12em;
+	display: inline-block;
+
+}
+
+/*Ruta Gastro*/
+
+#header_ruta{
+margin: 0;
+}
+
+.place-description{
+	font-size: 11px;
+	text-align: left;
+}
+
+.review_place{
+	text-align: left;
+	color: #ffc107;
+}
+.review_place_not{
+	color: gray;
+}
+
+.review_card{
+	border-top: 1px gray;
+}
