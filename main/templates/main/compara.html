@@ -1,0 +1,105 @@
+{%extends 'base.html'%}
+{%load static%}
+{%load polymerdep%}
+
+{%block componentes%}
+
+{{"google-map/google-map.html"|dep}}
+
+<style>
+	google-map{
+		height: 400px;
+	}
+	#map{
+		height: 400px;
+		width: 400px;
+	}
+</style>
+
+{%endblock componentes%}
+
+
+
+{%block content%}
+
+	<h1>Comparando!</h1>
+
+	<form action="." method="post">
+		{% csrf_token %}
+		<select name="trail">
+			{%for ruta in rutas%}
+		  <option value="{{ruta.trailId}}">
+		  	{{ruta.originStationName}} - {{ruta.destinationStationName}}
+		  </option>
+		  	{%endfor%}
+		</select>
+		<input type="submit" value="Seleccionar"></input>
+	</form>
+
+{%if post%}
+
+<div id="map"></div>
+
+<img src="{{img}}">
+
+
+{%endif%}
+
+{%endblock content%}
+
+{%block javas%}
+
+<script>
+	function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    {%for punto in puntos%}
+    center: {lat: {{punto.latitude}}, lng: {{punto.longitude}}},
+    {%endfor%}
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  });
+
+var flightPlanCoordinates = [
+  {%for punto in puntos%}
+    {lat: {{punto.latitude}}, lng: {{punto.longitude}}},
+  {%endfor%}
+  ];
+
+  var flightPath = new google.maps.Polyline({
+    path: flightPlanCoordinates,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 4
+  });
+
+  flightPath.setMap(map);
+
+
+  {%for punto in puntos%}
+  myLatLon={lat:{{punto.latitude}},lng:{{punto.longitude}}}
+  marker=makeMarker(myLatLon);
+  marker.setMap(map);
+  {%endfor%}
+}
+
+function makeMarker(myLatLon){
+	var marker = new google.maps.Marker({
+    position: myLatLon,
+    title:"Hello World!"
+});
+	return marker;
+}
+
+
+
+
+ 
+  
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQriPLIj2wAsBWJHXnWdDPIo_Q9Q2fo7A&callback=initMap&libraries=places">
+</script>
+
+{%endblock javas%}

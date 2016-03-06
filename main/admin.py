@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Ruta, Punto
 
-# Register your models here.
+admin.site.register(Punto)
+admin.site.register(Ruta)
