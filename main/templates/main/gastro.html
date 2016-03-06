@@ -4,8 +4,6 @@
 
 {%block componentes%}
 
-{{"google-map/google-map.html"|dep}}
-
 <style>
 	google-map{
 		height: 400px;
@@ -22,30 +20,24 @@
 
 {%block content%}
 
-	<h1>Comparando!</h1>
-
-	<form action="." method="post">
-		{% csrf_token %}
-		<select name="trail">
-			{%for ruta in rutas%}
-		  <option value="{{ruta.trailId}}">
-		  	{{ruta.originStationName}} - {{ruta.destinationStationName}}
-		  </option>
-		  	{%endfor%}
-		</select>
-		<input type="submit" value="Seleccionar"></input>
-	</form>
-
-{%if post%}
+<h1>Ruta Gastronómica</h1>
 
 <div id="map"></div>
 
-<img src="{{img}}">
+<h2>Datos:</h2>
 
+<ul>
+	<li>Negocio1</li>
+	<li>Negocio2</li>
+	<li>Negocio3</li>
+	<li>NegocioN</li>
+</ul>
 
-{%endif%}
 
 {%endblock content%}
+
+
+
 
 {%block javas%}
 

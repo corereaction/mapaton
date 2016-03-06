@@ -155,4 +155,27 @@ class Compara(View):
 
 		return render(request,template_name,context)
 
+class Custom(TemplateView):
+	template_name="main/custom.html"
+
+class Gastro(View):
+	def get(self,request):
+		template_name="main/gastro.html"
+		ruta=get_object_or_404(Ruta,trailId='4635901346971648')
+
+		try:
+			puntos=ruta.puntos.all()
+			print("Objeto encontrado!")
+			
+		except:
+			print("No objeto")
+
+		context={
+		'ruta':ruta,
+		'puntos':puntos
+		}
+
+		return render(request,template_name,context)
+
+
 
